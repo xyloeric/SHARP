@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		581E13C614E8C0360066A6E8 /* MSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 581E13C514E8C0360066A6E8 /* MSValue.m */; };
+		58303B7614AA6F2A00545954 /* DLSlidingBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58303B7514AA6F2A00545954 /* DLSlidingBackgroundView.m */; };
+		583B238814AE5C5A00CD4E5E /* MSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583B238614AE5C5A00CD4E5E /* MSTableViewController.m */; };
+		583B238914AE5C5A00CD4E5E /* MSTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583B238714AE5C5A00CD4E5E /* MSTableViewController.xib */; };
+		583B23A814AE677000CD4E5E /* MedDataGadgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 583B23A514AE677000CD4E5E /* MedDataGadgetView.m */; };
+		583B23A914AE677000CD4E5E /* OverviewLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 583B23A714AE677000CD4E5E /* OverviewLine.m */; };
+		583B23B614AEC8ED00CD4E5E /* MSTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 583B23B514AEC8ED00CD4E5E /* MSTableCellView.m */; };
+		583B23B914AEC9FE00CD4E5E /* MSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 583B23B814AEC9FE00CD4E5E /* MSTableView.m */; };
+		583B23BC14AECA0F00CD4E5E /* MSTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 583B23BB14AECA0F00CD4E5E /* MSTableRowView.m */; };
+		588D6F2C14AB9FAD00CAADB6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 588D6F2B14AB9FAD00CAADB6 /* WebKit.framework */; };
+		5891690E14FC2FDF00063A9B /* EntityTypeHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5891690D14FC2FDF00063A9B /* EntityTypeHelpers.m */; };
+		589F713814B032A9007B4E53 /* DLEventForwardingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 589F713714B032A8007B4E53 /* DLEventForwardingWindow.m */; };
+		58A0A09714B107FC00A76A89 /* MSCSMLCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A0A09614B107FC00A76A89 /* MSCSMLCoordinator.m */; };
+		58A0A09A14B1081600A76A89 /* MSEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A0A09914B1081600A76A89 /* MSEntity.m */; };
+		58ADCDAB14BACCC000C0A21B /* MSDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 58ADCDAA14BACCC000C0A21B /* MSDataWrapper.m */; };
+		58BE734714A7CCC4000AF039 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58BE734614A7CCC4000AF039 /* Cocoa.framework */; };
+		58BE735114A7CCC4000AF039 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58BE734F14A7CCC4000AF039 /* InfoPlist.strings */; };
+		58BE735314A7CCC4000AF039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE735214A7CCC4000AF039 /* main.m */; };
+		58BE735714A7CCC4000AF039 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 58BE735514A7CCC4000AF039 /* Credits.rtf */; };
+		58BE735A14A7CCC4000AF039 /* MediSenseFrontMacAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE735914A7CCC4000AF039 /* MediSenseFrontMacAppDelegate.m */; };
+		58BE735D14A7CCC4000AF039 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BE735B14A7CCC4000AF039 /* MainMenu.xib */; };
+		58BE736614A90B9A000AF039 /* DLSlidingNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE736414A90B99000AF039 /* DLSlidingNavController.m */; };
+		58BE736714A90B9A000AF039 /* DLSlidingNavController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BE736514A90B99000AF039 /* DLSlidingNavController.xib */; };
+		58BE736914A91917000AF039 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58BE736814A91917000AF039 /* QuartzCore.framework */; };
+		58BE736C14A91F23000AF039 /* DLSlidingChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE736B14A91F23000AF039 /* DLSlidingChildView.m */; };
+		58BE736F14A92636000AF039 /* DLBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BE736E14A92636000AF039 /* DLBox.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		581E13C414E8C0360066A6E8 /* MSValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSValue.h; sourceTree = "<group>"; };
+		581E13C514E8C0360066A6E8 /* MSValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSValue.m; sourceTree = "<group>"; };
+		58303B7414AA6F2A00545954 /* DLSlidingBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlidingBackgroundView.h; sourceTree = "<group>"; };
+		58303B7514AA6F2A00545954 /* DLSlidingBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSlidingBackgroundView.m; sourceTree = "<group>"; };
+		583B238514AE5C5A00CD4E5E /* MSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTableViewController.h; sourceTree = "<group>"; };
+		583B238614AE5C5A00CD4E5E /* MSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTableViewController.m; sourceTree = "<group>"; };
+		583B238714AE5C5A00CD4E5E /* MSTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSTableViewController.xib; sourceTree = "<group>"; };
+		583B23A414AE677000CD4E5E /* MedDataGadgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedDataGadgetView.h; sourceTree = "<group>"; };
+		583B23A514AE677000CD4E5E /* MedDataGadgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedDataGadgetView.m; sourceTree = "<group>"; };
+		583B23A614AE677000CD4E5E /* OverviewLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewLine.h; sourceTree = "<group>"; };
+		583B23A714AE677000CD4E5E /* OverviewLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewLine.m; sourceTree = "<group>"; };
+		583B23B414AEC8ED00CD4E5E /* MSTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTableCellView.h; sourceTree = "<group>"; };
+		583B23B514AEC8ED00CD4E5E /* MSTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTableCellView.m; sourceTree = "<group>"; };
+		583B23B714AEC9FE00CD4E5E /* MSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTableView.h; sourceTree = "<group>"; };
+		583B23B814AEC9FE00CD4E5E /* MSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTableView.m; sourceTree = "<group>"; };
+		583B23BA14AECA0E00CD4E5E /* MSTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTableRowView.h; sourceTree = "<group>"; };
+		583B23BB14AECA0F00CD4E5E /* MSTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTableRowView.m; sourceTree = "<group>"; };
+		588D6F2B14AB9FAD00CAADB6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		5891690C14FC2FDF00063A9B /* EntityTypeHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityTypeHelpers.h; path = ../EntityTypeHelpers.h; sourceTree = "<group>"; };
+		5891690D14FC2FDF00063A9B /* EntityTypeHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntityTypeHelpers.m; path = ../EntityTypeHelpers.m; sourceTree = "<group>"; };
+		589F713614B032A8007B4E53 /* DLEventForwardingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLEventForwardingWindow.h; sourceTree = "<group>"; };
+		589F713714B032A8007B4E53 /* DLEventForwardingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLEventForwardingWindow.m; sourceTree = "<group>"; };
+		58A0A09514B107FC00A76A89 /* MSCSMLCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCSMLCoordinator.h; sourceTree = "<group>"; };
+		58A0A09614B107FC00A76A89 /* MSCSMLCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCSMLCoordinator.m; sourceTree = "<group>"; };
+		58A0A09814B1081600A76A89 /* MSEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSEntity.h; sourceTree = "<group>"; };
+		58A0A09914B1081600A76A89 /* MSEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSEntity.m; sourceTree = "<group>"; };
+		58ADCDA914BACCC000C0A21B /* MSDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDataWrapper.h; sourceTree = "<group>"; };
+		58ADCDAA14BACCC000C0A21B /* MSDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDataWrapper.m; sourceTree = "<group>"; };
+		58BE734214A7CCC4000AF039 /* MediSenseFrontMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediSenseFrontMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58BE734614A7CCC4000AF039 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		58BE734914A7CCC4000AF039 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		58BE734A14A7CCC4000AF039 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		58BE734B14A7CCC4000AF039 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		58BE734E14A7CCC4000AF039 /* MediSenseFrontMac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MediSenseFrontMac-Info.plist"; sourceTree = "<group>"; };
+		58BE735014A7CCC4000AF039 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		58BE735214A7CCC4000AF039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		58BE735414A7CCC4000AF039 /* MediSenseFrontMac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MediSenseFrontMac-Prefix.pch"; sourceTree = "<group>"; };
+		58BE735614A7CCC4000AF039 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		58BE735814A7CCC4000AF039 /* MediSenseFrontMacAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediSenseFrontMacAppDelegate.h; sourceTree = "<group>"; };
+		58BE735914A7CCC4000AF039 /* MediSenseFrontMacAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediSenseFrontMacAppDelegate.m; sourceTree = "<group>"; };
+		58BE735C14A7CCC4000AF039 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		58BE736314A90B99000AF039 /* DLSlidingNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlidingNavController.h; sourceTree = "<group>"; };
+		58BE736414A90B99000AF039 /* DLSlidingNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSlidingNavController.m; sourceTree = "<group>"; };
+		58BE736514A90B99000AF039 /* DLSlidingNavController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLSlidingNavController.xib; sourceTree = "<group>"; };
+		58BE736814A91917000AF039 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		58BE736A14A91F23000AF039 /* DLSlidingChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLSlidingChildView.h; sourceTree = "<group>"; };
+		58BE736B14A91F23000AF039 /* DLSlidingChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSlidingChildView.m; sourceTree = "<group>"; };
+		58BE736D14A92636000AF039 /* DLBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBox.h; sourceTree = "<group>"; };
+		58BE736E14A92636000AF039 /* DLBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBox.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58BE733F14A7CCC4000AF039 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				588D6F2C14AB9FAD00CAADB6 /* WebKit.framework in Frameworks */,
+				58BE736914A91917000AF039 /* QuartzCore.framework in Frameworks */,
+				58BE734714A7CCC4000AF039 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		583B23A314AE676200CD4E5E /* Visual Gadget */ = {
+			isa = PBXGroup;
+			children = (
+				583B23A414AE677000CD4E5E /* MedDataGadgetView.h */,
+				583B23A514AE677000CD4E5E /* MedDataGadgetView.m */,
+				583B23A614AE677000CD4E5E /* OverviewLine.h */,
+				583B23A714AE677000CD4E5E /* OverviewLine.m */,
+			);
+			name = "Visual Gadget";
+			sourceTree = "<group>";
+		};
+		587E6A1014AE4681008FFFDA /* DLSlidingNav */ = {
+			isa = PBXGroup;
+			children = (
+				589F713614B032A8007B4E53 /* DLEventForwardingWindow.h */,
+				589F713714B032A8007B4E53 /* DLEventForwardingWindow.m */,
+				58BE736314A90B99000AF039 /* DLSlidingNavController.h */,
+				58BE736414A90B99000AF039 /* DLSlidingNavController.m */,
+				58BE736514A90B99000AF039 /* DLSlidingNavController.xib */,
+				58BE736A14A91F23000AF039 /* DLSlidingChildView.h */,
+				58BE736B14A91F23000AF039 /* DLSlidingChildView.m */,
+				58303B7414AA6F2A00545954 /* DLSlidingBackgroundView.h */,
+				58303B7514AA6F2A00545954 /* DLSlidingBackgroundView.m */,
+			);
+			name = DLSlidingNav;
+			sourceTree = "<group>";
+		};
+		58A0A09214B1079700A76A89 /* MSViews */ = {
+			isa = PBXGroup;
+			children = (
+				583B238514AE5C5A00CD4E5E /* MSTableViewController.h */,
+				583B238614AE5C5A00CD4E5E /* MSTableViewController.m */,
+				583B238714AE5C5A00CD4E5E /* MSTableViewController.xib */,
+				583B23B714AEC9FE00CD4E5E /* MSTableView.h */,
+				583B23B814AEC9FE00CD4E5E /* MSTableView.m */,
+				583B23B414AEC8ED00CD4E5E /* MSTableCellView.h */,
+				583B23B514AEC8ED00CD4E5E /* MSTableCellView.m */,
+				583B23BA14AECA0E00CD4E5E /* MSTableRowView.h */,
+				583B23BB14AECA0F00CD4E5E /* MSTableRowView.m */,
+			);
+			name = MSViews;
+			sourceTree = "<group>";
+		};
+		58A0A09414B107A700A76A89 /* MSControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5891690C14FC2FDF00063A9B /* EntityTypeHelpers.h */,
+				5891690D14FC2FDF00063A9B /* EntityTypeHelpers.m */,
+				58A0A09514B107FC00A76A89 /* MSCSMLCoordinator.h */,
+				58A0A09614B107FC00A76A89 /* MSCSMLCoordinator.m */,
+				58A0A09814B1081600A76A89 /* MSEntity.h */,
+				58A0A09914B1081600A76A89 /* MSEntity.m */,
+				58ADCDA914BACCC000C0A21B /* MSDataWrapper.h */,
+				58ADCDAA14BACCC000C0A21B /* MSDataWrapper.m */,
+				581E13C414E8C0360066A6E8 /* MSValue.h */,
+				581E13C514E8C0360066A6E8 /* MSValue.m */,
+			);
+			name = MSControllers;
+			sourceTree = "<group>";
+		};
+		58BE733714A7CCC4000AF039 = {
+			isa = PBXGroup;
+			children = (
+				588D6F2B14AB9FAD00CAADB6 /* WebKit.framework */,
+				58BE736814A91917000AF039 /* QuartzCore.framework */,
+				58BE734C14A7CCC4000AF039 /* MediSenseFrontMac */,
+				58BE734514A7CCC4000AF039 /* Frameworks */,
+				58BE734314A7CCC4000AF039 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58BE734314A7CCC4000AF039 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58BE734214A7CCC4000AF039 /* MediSenseFrontMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58BE734514A7CCC4000AF039 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58BE734614A7CCC4000AF039 /* Cocoa.framework */,
+				58BE734814A7CCC4000AF039 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58BE734814A7CCC4000AF039 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58BE734914A7CCC4000AF039 /* AppKit.framework */,
+				58BE734A14A7CCC4000AF039 /* CoreData.framework */,
+				58BE734B14A7CCC4000AF039 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		58BE734C14A7CCC4000AF039 /* MediSenseFrontMac */ = {
+			isa = PBXGroup;
+			children = (
+				58A0A09414B107A700A76A89 /* MSControllers */,
+				58A0A09214B1079700A76A89 /* MSViews */,
+				583B23A314AE676200CD4E5E /* Visual Gadget */,
+				587E6A1014AE4681008FFFDA /* DLSlidingNav */,
+				58BE735814A7CCC4000AF039 /* MediSenseFrontMacAppDelegate.h */,
+				58BE735914A7CCC4000AF039 /* MediSenseFrontMacAppDelegate.m */,
+				58BE735B14A7CCC4000AF039 /* MainMenu.xib */,
+				58BE736D14A92636000AF039 /* DLBox.h */,
+				58BE736E14A92636000AF039 /* DLBox.m */,
+				58BE734D14A7CCC4000AF039 /* Supporting Files */,
+			);
+			path = MediSenseFrontMac;
+			sourceTree = "<group>";
+		};
+		58BE734D14A7CCC4000AF039 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58BE734E14A7CCC4000AF039 /* MediSenseFrontMac-Info.plist */,
+				58BE734F14A7CCC4000AF039 /* InfoPlist.strings */,
+				58BE735214A7CCC4000AF039 /* main.m */,
+				58BE735414A7CCC4000AF039 /* MediSenseFrontMac-Prefix.pch */,
+				58BE735514A7CCC4000AF039 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58BE734114A7CCC4000AF039 /* MediSenseFrontMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58BE736014A7CCC4000AF039 /* Build configuration list for PBXNativeTarget "MediSenseFrontMac" */;
+			buildPhases = (
+				58BE733E14A7CCC4000AF039 /* Sources */,
+				58BE733F14A7CCC4000AF039 /* Frameworks */,
+				58BE734014A7CCC4000AF039 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediSenseFrontMac;
+			productName = MediSenseFrontMac;
+			productReference = 58BE734214A7CCC4000AF039 /* MediSenseFrontMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58BE733914A7CCC4000AF039 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Dr.Lulu;
+			};
+			buildConfigurationList = 58BE733C14A7CCC4000AF039 /* Build configuration list for PBXProject "MediSenseFrontMac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 58BE733714A7CCC4000AF039;
+			productRefGroup = 58BE734314A7CCC4000AF039 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58BE734114A7CCC4000AF039 /* MediSenseFrontMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58BE734014A7CCC4000AF039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BE735114A7CCC4000AF039 /* InfoPlist.strings in Resources */,
+				58BE735714A7CCC4000AF039 /* Credits.rtf in Resources */,
+				58BE735D14A7CCC4000AF039 /* MainMenu.xib in Resources */,
+				58BE736714A90B9A000AF039 /* DLSlidingNavController.xib in Resources */,
+				583B238914AE5C5A00CD4E5E /* MSTableViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58BE733E14A7CCC4000AF039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BE735314A7CCC4000AF039 /* main.m in Sources */,
+				58BE735A14A7CCC4000AF039 /* MediSenseFrontMacAppDelegate.m in Sources */,
+				58BE736614A90B9A000AF039 /* DLSlidingNavController.m in Sources */,
+				58BE736C14A91F23000AF039 /* DLSlidingChildView.m in Sources */,
+				58BE736F14A92636000AF039 /* DLBox.m in Sources */,
+				58303B7614AA6F2A00545954 /* DLSlidingBackgroundView.m in Sources */,
+				583B238814AE5C5A00CD4E5E /* MSTableViewController.m in Sources */,
+				583B23A814AE677000CD4E5E /* MedDataGadgetView.m in Sources */,
+				583B23A914AE677000CD4E5E /* OverviewLine.m in Sources */,
+				583B23B614AEC8ED00CD4E5E /* MSTableCellView.m in Sources */,
+				583B23B914AEC9FE00CD4E5E /* MSTableView.m in Sources */,
+				583B23BC14AECA0F00CD4E5E /* MSTableRowView.m in Sources */,
+				589F713814B032A9007B4E53 /* DLEventForwardingWindow.m in Sources */,
+				58A0A09714B107FC00A76A89 /* MSCSMLCoordinator.m in Sources */,
+				58A0A09A14B1081600A76A89 /* MSEntity.m in Sources */,
+				58ADCDAB14BACCC000C0A21B /* MSDataWrapper.m in Sources */,
+				581E13C614E8C0360066A6E8 /* MSValue.m in Sources */,
+				5891690E14FC2FDF00063A9B /* EntityTypeHelpers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		58BE734F14A7CCC4000AF039 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58BE735014A7CCC4000AF039 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		58BE735514A7CCC4000AF039 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58BE735614A7CCC4000AF039 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		58BE735B14A7CCC4000AF039 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58BE735C14A7CCC4000AF039 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		58BE735E14A7CCC4000AF039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		58BE735F14A7CCC4000AF039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		58BE736114A7CCC4000AF039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MediSenseFrontMac/MediSenseFrontMac-Prefix.pch";
+				INFOPLIST_FILE = "MediSenseFrontMac/MediSenseFrontMac-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		58BE736214A7CCC4000AF039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MediSenseFrontMac/MediSenseFrontMac-Prefix.pch";
+				INFOPLIST_FILE = "MediSenseFrontMac/MediSenseFrontMac-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58BE733C14A7CCC4000AF039 /* Build configuration list for PBXProject "MediSenseFrontMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58BE735E14A7CCC4000AF039 /* Debug */,
+				58BE735F14A7CCC4000AF039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58BE736014A7CCC4000AF039 /* Build configuration list for PBXNativeTarget "MediSenseFrontMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58BE736114A7CCC4000AF039 /* Debug */,
+				58BE736214A7CCC4000AF039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58BE733914A7CCC4000AF039 /* Project object */;
+}
