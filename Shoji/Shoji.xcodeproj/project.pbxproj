@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5807102A14FFD00800B6661A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5807102914FFD00800B6661A /* UIKit.framework */; };
+		5807102C14FFD00800B6661A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5807102B14FFD00800B6661A /* Foundation.framework */; };
+		5807102E14FFD00800B6661A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5807102D14FFD00800B6661A /* CoreGraphics.framework */; };
+		5807103414FFD00800B6661A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5807103214FFD00800B6661A /* InfoPlist.strings */; };
+		5807103614FFD00800B6661A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5807103514FFD00800B6661A /* main.m */; };
+		5807103A14FFD00800B6661A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5807103914FFD00800B6661A /* AppDelegate.m */; };
+		5807104914FFD08600B6661A /* DLEventForwardingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5807104114FFD08600B6661A /* DLEventForwardingWindow.m */; };
+		5807104A14FFD08600B6661A /* DLShojiNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5807104314FFD08600B6661A /* DLShojiNavController.m */; };
+		5807104C14FFD08600B6661A /* DLShojiTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5807104614FFD08600B6661A /* DLShojiTableView.m */; };
+		5807104D14FFD08600B6661A /* DLShojiBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5807104814FFD08600B6661A /* DLShojiBackgroundView.m */; };
+		5807105414FFE24100B6661A /* DLShojiNavController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5807105314FFE24100B6661A /* DLShojiNavController.xib */; };
+		5807106615012D1200B6661A /* DLShojiTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5807106415012D1200B6661A /* DLShojiTableViewController.m */; };
+		5820E97615297B6F00CD771F /* DLDetailedGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5820E97415297B6E00CD771F /* DLDetailedGraphViewController.m */; };
+		5820E97715297B6F00CD771F /* DLDetailedGraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5820E97515297B6F00CD771F /* DLDetailedGraphViewController.xib */; };
+		5820E97A15297BA500CD771F /* DLDetailedGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5820E97915297BA500CD771F /* DLDetailedGraphView.m */; };
+		5820E98A1529830900CD771F /* mootools-adapter.js in Sources */ = {isa = PBXBuildFile; fileRef = 5820E97D1529830900CD771F /* mootools-adapter.js */; };
+		5820E98B1529830900CD771F /* mootools-adapter.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 5820E97E1529830900CD771F /* mootools-adapter.src.js */; };
+		5820E98C1529830900CD771F /* prototype-adapter.js in Sources */ = {isa = PBXBuildFile; fileRef = 5820E97F1529830900CD771F /* prototype-adapter.js */; };
+		5820E98D1529830900CD771F /* prototype-adapter.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 5820E9801529830900CD771F /* prototype-adapter.src.js */; };
+		5820E98E1529830900CD771F /* highstock.js in Sources */ = {isa = PBXBuildFile; fileRef = 5820E9811529830900CD771F /* highstock.js */; };
+		5820E98F1529830900CD771F /* highstock.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 5820E9821529830900CD771F /* highstock.src.js */; };
+		5820E9901529830900CD771F /* exporting.js in Sources */ = {isa = PBXBuildFile; fileRef = 5820E9831529830900CD771F /* exporting.js */; };
+		5820E9911529830900CD771F /* exporting.src.js in Sources */ = {isa = PBXBuildFile; fileRef = 5820E9841529830900CD771F /* exporting.src.js */; };
+		5820E9921529830900CD771F /* dark-blue.js in Sources */ = {isa = PBXBuildFile; fileRef = 5820E9851529830900CD771F /* dark-blue.js */; };
+		5820E9931529830900CD771F /* dark-green.js in Sources */ = {isa = PBXBuildFile; fileRef = 5820E9861529830900CD771F /* dark-green.js */; };
+		5820E9941529830900CD771F /* gray.js in Sources */ = {isa = PBXBuildFile; fileRef = 5820E9871529830900CD771F /* gray.js */; };
+		5820E9951529830900CD771F /* grid.js in Sources */ = {isa = PBXBuildFile; fileRef = 5820E9881529830900CD771F /* grid.js */; };
+		58327CF0151A2CA5003DF4AA /* TraceCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 58327CEF151A2CA5003DF4AA /* TraceCoordinator.m */; };
+		5842A90F150890E20049FFD6 /* SparklineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5842A90E150890E20049FFD6 /* SparklineCell.m */; };
+		5842A9151508933A0049FFD6 /* DLShojiTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5842A9141508933A0049FFD6 /* DLShojiTableViewController.xib */; };
+		5842A917150893680049FFD6 /* SparklineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5842A916150893680049FFD6 /* SparklineCell.xib */; };
+		5842A92315090F060049FFD6 /* MSEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5842A91E15090F060049FFD6 /* MSEntity.m */; };
+		5842A92415090F060049FFD6 /* MSDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5842A92015090F060049FFD6 /* MSDataWrapper.m */; };
+		5842A92515090F060049FFD6 /* MSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5842A92215090F060049FFD6 /* MSValue.m */; };
+		5842A92815090F430049FFD6 /* EntityTypeHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5842A92715090F430049FFD6 /* EntityTypeHelpers.m */; };
+		5842A92B15093C6C0049FFD6 /* SparklineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5842A92A15093C6C0049FFD6 /* SparklineView.m */; };
+		5854CC8615054279002BB002 /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC6B15054279002BB002 /* CXMLDocument_CreationExtensions.m */; };
+		5854CC8715054279002BB002 /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC6D15054279002BB002 /* CXMLNode_CreationExtensions.m */; };
+		5854CC8815054279002BB002 /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC6F15054279002BB002 /* CXHTMLDocument.m */; };
+		5854CC8915054279002BB002 /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC7115054279002BB002 /* CXMLDocument.m */; };
+		5854CC8A15054279002BB002 /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC7315054279002BB002 /* CXMLDocument_PrivateExtensions.m */; };
+		5854CC8B15054279002BB002 /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC7515054279002BB002 /* CXMLElement.m */; };
+		5854CC8C15054279002BB002 /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC7715054279002BB002 /* CXMLElement_CreationExtensions.m */; };
+		5854CC8D15054279002BB002 /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC7915054279002BB002 /* CXMLElement_ElementTreeExtensions.m */; };
+		5854CC8E15054279002BB002 /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC7B15054279002BB002 /* CXMLNamespaceNode.m */; };
+		5854CC8F15054279002BB002 /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC7D15054279002BB002 /* CXMLNode.m */; };
+		5854CC9015054279002BB002 /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC7F15054279002BB002 /* CXMLNode_PrivateExtensions.m */; };
+		5854CC9115054279002BB002 /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC8115054279002BB002 /* CXMLNode_XPathExtensions.m */; };
+		5854CC9215054279002BB002 /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5854CC8415054279002BB002 /* CTidy.m */; };
+		588D43671502CE6A007C1109 /* UIView+DLShojiSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 588D43661502CE6A007C1109 /* UIView+DLShojiSupport.m */; };
+		58952BC6151E58CD00996E5C /* PatientSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58952BC5151E58CD00996E5C /* PatientSelectionTableViewController.m */; };
+		58952BCD151E784700996E5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58952BCC151E784700996E5C /* QuartzCore.framework */; };
+		58C0E94B15298B7800468614 /* template.htm in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E97C1529830900CD771F /* template.htm */; };
+		58C0E94C15298B7800468614 /* mootools-adapter.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E97D1529830900CD771F /* mootools-adapter.js */; };
+		58C0E94D15298B7800468614 /* mootools-adapter.src.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E97E1529830900CD771F /* mootools-adapter.src.js */; };
+		58C0E94E15298B7800468614 /* prototype-adapter.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E97F1529830900CD771F /* prototype-adapter.js */; };
+		58C0E94F15298B7800468614 /* prototype-adapter.src.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E9801529830900CD771F /* prototype-adapter.src.js */; };
+		58C0E95015298B7800468614 /* highstock.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E9811529830900CD771F /* highstock.js */; };
+		58C0E95115298B7800468614 /* highstock.src.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E9821529830900CD771F /* highstock.src.js */; };
+		58C0E95215298B7800468614 /* exporting.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E9831529830900CD771F /* exporting.js */; };
+		58C0E95315298B7800468614 /* exporting.src.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E9841529830900CD771F /* exporting.src.js */; };
+		58C0E95415298B7800468614 /* dark-blue.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E9851529830900CD771F /* dark-blue.js */; };
+		58C0E95515298B7800468614 /* dark-green.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E9861529830900CD771F /* dark-green.js */; };
+		58C0E95615298B7800468614 /* gray.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E9871529830900CD771F /* gray.js */; };
+		58C0E95715298B7800468614 /* grid.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5820E9881529830900CD771F /* grid.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		58C0E94A15298B1700468614 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Documents;
+			dstSubfolderSpec = 16;
+			files = (
+				58C0E94B15298B7800468614 /* template.htm in CopyFiles */,
+				58C0E94C15298B7800468614 /* mootools-adapter.js in CopyFiles */,
+				58C0E94D15298B7800468614 /* mootools-adapter.src.js in CopyFiles */,
+				58C0E94E15298B7800468614 /* prototype-adapter.js in CopyFiles */,
+				58C0E94F15298B7800468614 /* prototype-adapter.src.js in CopyFiles */,
+				58C0E95015298B7800468614 /* highstock.js in CopyFiles */,
+				58C0E95115298B7800468614 /* highstock.src.js in CopyFiles */,
+				58C0E95215298B7800468614 /* exporting.js in CopyFiles */,
+				58C0E95315298B7800468614 /* exporting.src.js in CopyFiles */,
+				58C0E95415298B7800468614 /* dark-blue.js in CopyFiles */,
+				58C0E95515298B7800468614 /* dark-green.js in CopyFiles */,
+				58C0E95615298B7800468614 /* gray.js in CopyFiles */,
+				58C0E95715298B7800468614 /* grid.js in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5807102514FFD00700B6661A /* Shoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5807102914FFD00800B6661A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5807102B14FFD00800B6661A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5807102D14FFD00800B6661A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5807103114FFD00800B6661A /* Shoji-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shoji-Info.plist"; sourceTree = "<group>"; };
+		5807103314FFD00800B6661A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5807103514FFD00800B6661A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5807103714FFD00800B6661A /* Shoji-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shoji-Prefix.pch"; sourceTree = "<group>"; };
+		5807103814FFD00800B6661A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5807103914FFD00800B6661A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5807104014FFD08600B6661A /* DLEventForwardingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLEventForwardingWindow.h; sourceTree = "<group>"; };
+		5807104114FFD08600B6661A /* DLEventForwardingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLEventForwardingWindow.m; sourceTree = "<group>"; };
+		5807104214FFD08600B6661A /* DLShojiNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLShojiNavController.h; sourceTree = "<group>"; };
+		5807104314FFD08600B6661A /* DLShojiNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLShojiNavController.m; sourceTree = "<group>"; };
+		5807104514FFD08600B6661A /* DLShojiTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLShojiTableView.h; sourceTree = "<group>"; };
+		5807104614FFD08600B6661A /* DLShojiTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLShojiTableView.m; sourceTree = "<group>"; };
+		5807104714FFD08600B6661A /* DLShojiBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLShojiBackgroundView.h; sourceTree = "<group>"; };
+		5807104814FFD08600B6661A /* DLShojiBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLShojiBackgroundView.m; sourceTree = "<group>"; };
+		5807105314FFE24100B6661A /* DLShojiNavController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLShojiNavController.xib; sourceTree = "<group>"; };
+		5807106315012D1200B6661A /* DLShojiTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLShojiTableViewController.h; sourceTree = "<group>"; };
+		5807106415012D1200B6661A /* DLShojiTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLShojiTableViewController.m; sourceTree = "<group>"; };
+		5820E97315297B6E00CD771F /* DLDetailedGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLDetailedGraphViewController.h; sourceTree = "<group>"; };
+		5820E97415297B6E00CD771F /* DLDetailedGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLDetailedGraphViewController.m; sourceTree = "<group>"; };
+		5820E97515297B6F00CD771F /* DLDetailedGraphViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLDetailedGraphViewController.xib; sourceTree = "<group>"; };
+		5820E97815297BA400CD771F /* DLDetailedGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLDetailedGraphView.h; sourceTree = "<group>"; };
+		5820E97915297BA500CD771F /* DLDetailedGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLDetailedGraphView.m; sourceTree = "<group>"; };
+		5820E97C1529830900CD771F /* template.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template.htm; sourceTree = "<group>"; };
+		5820E97D1529830900CD771F /* mootools-adapter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "mootools-adapter.js"; sourceTree = "<group>"; };
+		5820E97E1529830900CD771F /* mootools-adapter.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "mootools-adapter.src.js"; sourceTree = "<group>"; };
+		5820E97F1529830900CD771F /* prototype-adapter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "prototype-adapter.js"; sourceTree = "<group>"; };
+		5820E9801529830900CD771F /* prototype-adapter.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "prototype-adapter.src.js"; sourceTree = "<group>"; };
+		5820E9811529830900CD771F /* highstock.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highstock.js; sourceTree = "<group>"; };
+		5820E9821529830900CD771F /* highstock.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highstock.src.js; sourceTree = "<group>"; };
+		5820E9831529830900CD771F /* exporting.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = exporting.js; sourceTree = "<group>"; };
+		5820E9841529830900CD771F /* exporting.src.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = exporting.src.js; sourceTree = "<group>"; };
+		5820E9851529830900CD771F /* dark-blue.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "dark-blue.js"; sourceTree = "<group>"; };
+		5820E9861529830900CD771F /* dark-green.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "dark-green.js"; sourceTree = "<group>"; };
+		5820E9871529830900CD771F /* gray.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = gray.js; sourceTree = "<group>"; };
+		5820E9881529830900CD771F /* grid.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = grid.js; sourceTree = "<group>"; };
+		58327CEE151A2CA5003DF4AA /* TraceCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraceCoordinator.h; sourceTree = "<group>"; };
+		58327CEF151A2CA5003DF4AA /* TraceCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraceCoordinator.m; sourceTree = "<group>"; };
+		5842A90D150890E20049FFD6 /* SparklineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SparklineCell.h; sourceTree = "<group>"; };
+		5842A90E150890E20049FFD6 /* SparklineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SparklineCell.m; sourceTree = "<group>"; };
+		5842A9141508933A0049FFD6 /* DLShojiTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLShojiTableViewController.xib; sourceTree = "<group>"; };
+		5842A916150893680049FFD6 /* SparklineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SparklineCell.xib; sourceTree = "<group>"; };
+		5842A91D15090F060049FFD6 /* MSEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSEntity.h; sourceTree = "<group>"; };
+		5842A91E15090F060049FFD6 /* MSEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSEntity.m; sourceTree = "<group>"; };
+		5842A91F15090F060049FFD6 /* MSDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDataWrapper.h; sourceTree = "<group>"; };
+		5842A92015090F060049FFD6 /* MSDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDataWrapper.m; sourceTree = "<group>"; };
+		5842A92115090F060049FFD6 /* MSValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSValue.h; sourceTree = "<group>"; };
+		5842A92215090F060049FFD6 /* MSValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSValue.m; sourceTree = "<group>"; };
+		5842A92615090F430049FFD6 /* EntityTypeHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityTypeHelpers.h; sourceTree = "<group>"; };
+		5842A92715090F430049FFD6 /* EntityTypeHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityTypeHelpers.m; sourceTree = "<group>"; };
+		5842A92915093C6C0049FFD6 /* SparklineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SparklineView.h; sourceTree = "<group>"; };
+		5842A92A15093C6C0049FFD6 /* SparklineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SparklineView.m; sourceTree = "<group>"; };
+		5854CC6A15054279002BB002 /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
+		5854CC6B15054279002BB002 /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
+		5854CC6C15054279002BB002 /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
+		5854CC6D15054279002BB002 /* CXMLNode_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_CreationExtensions.m; sourceTree = "<group>"; };
+		5854CC6E15054279002BB002 /* CXHTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHTMLDocument.h; sourceTree = "<group>"; };
+		5854CC6F15054279002BB002 /* CXHTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHTMLDocument.m; sourceTree = "<group>"; };
+		5854CC7015054279002BB002 /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument.h; sourceTree = "<group>"; };
+		5854CC7115054279002BB002 /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
+		5854CC7215054279002BB002 /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
+		5854CC7315054279002BB002 /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
+		5854CC7415054279002BB002 /* CXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement.h; sourceTree = "<group>"; };
+		5854CC7515054279002BB002 /* CXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement.m; sourceTree = "<group>"; };
+		5854CC7615054279002BB002 /* CXMLElement_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_CreationExtensions.h; sourceTree = "<group>"; };
+		5854CC7715054279002BB002 /* CXMLElement_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_CreationExtensions.m; sourceTree = "<group>"; };
+		5854CC7815054279002BB002 /* CXMLElement_ElementTreeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_ElementTreeExtensions.h; sourceTree = "<group>"; };
+		5854CC7915054279002BB002 /* CXMLElement_ElementTreeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_ElementTreeExtensions.m; sourceTree = "<group>"; };
+		5854CC7A15054279002BB002 /* CXMLNamespaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNamespaceNode.h; sourceTree = "<group>"; };
+		5854CC7B15054279002BB002 /* CXMLNamespaceNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNamespaceNode.m; sourceTree = "<group>"; };
+		5854CC7C15054279002BB002 /* CXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode.h; sourceTree = "<group>"; };
+		5854CC7D15054279002BB002 /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
+		5854CC7E15054279002BB002 /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
+		5854CC7F15054279002BB002 /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
+		5854CC8015054279002BB002 /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
+		5854CC8115054279002BB002 /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
+		5854CC8315054279002BB002 /* CTidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTidy.h; sourceTree = "<group>"; };
+		5854CC8415054279002BB002 /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
+		5854CC8515054279002BB002 /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+		5854CC93150542DC002BB002 /* libxml2.2.7.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.7.3.dylib; path = usr/lib/libxml2.2.7.3.dylib; sourceTree = SDKROOT; };
+		588D43651502CE69007C1109 /* UIView+DLShojiSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DLShojiSupport.h"; sourceTree = "<group>"; };
+		588D43661502CE6A007C1109 /* UIView+DLShojiSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DLShojiSupport.m"; sourceTree = "<group>"; };
+		58952BC4151E58CD00996E5C /* PatientSelectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientSelectionTableViewController.h; sourceTree = "<group>"; };
+		58952BC5151E58CD00996E5C /* PatientSelectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientSelectionTableViewController.m; sourceTree = "<group>"; };
+		58952BCC151E784700996E5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5807102214FFD00700B6661A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58952BCD151E784700996E5C /* QuartzCore.framework in Frameworks */,
+				5807102A14FFD00800B6661A /* UIKit.framework in Frameworks */,
+				5807102C14FFD00800B6661A /* Foundation.framework in Frameworks */,
+				5807102E14FFD00800B6661A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5807101A14FFD00700B6661A = {
+			isa = PBXGroup;
+			children = (
+				58952BCC151E784700996E5C /* QuartzCore.framework */,
+				5854CC93150542DC002BB002 /* libxml2.2.7.3.dylib */,
+				5807102F14FFD00800B6661A /* Shoji */,
+				5807102814FFD00700B6661A /* Frameworks */,
+				5807102614FFD00700B6661A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5807102614FFD00700B6661A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5807102514FFD00700B6661A /* Shoji.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5807102814FFD00700B6661A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5807102914FFD00800B6661A /* UIKit.framework */,
+				5807102B14FFD00800B6661A /* Foundation.framework */,
+				5807102D14FFD00800B6661A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5807102F14FFD00800B6661A /* Shoji */ = {
+			isa = PBXGroup;
+			children = (
+				5820E97B152982FB00CD771F /* HighChart */,
+				58327CED151A2C79003DF4AA /* Coordinator */,
+				5842A91C15090EE70049FFD6 /* Entities */,
+				5854CC6715054257002BB002 /* TouchXML */,
+				5807104E14FFD08A00B6661A /* DLSlidingNav */,
+				5807103814FFD00800B6661A /* AppDelegate.h */,
+				5807103914FFD00800B6661A /* AppDelegate.m */,
+				5807103014FFD00800B6661A /* Supporting Files */,
+			);
+			path = Shoji;
+			sourceTree = "<group>";
+		};
+		5807103014FFD00800B6661A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5807103114FFD00800B6661A /* Shoji-Info.plist */,
+				5807103214FFD00800B6661A /* InfoPlist.strings */,
+				5807103514FFD00800B6661A /* main.m */,
+				5807103714FFD00800B6661A /* Shoji-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5807104E14FFD08A00B6661A /* DLSlidingNav */ = {
+			isa = PBXGroup;
+			children = (
+				5807104014FFD08600B6661A /* DLEventForwardingWindow.h */,
+				5807104114FFD08600B6661A /* DLEventForwardingWindow.m */,
+				5807104214FFD08600B6661A /* DLShojiNavController.h */,
+				5807104314FFD08600B6661A /* DLShojiNavController.m */,
+				5807105314FFE24100B6661A /* DLShojiNavController.xib */,
+				5807104514FFD08600B6661A /* DLShojiTableView.h */,
+				5807104614FFD08600B6661A /* DLShojiTableView.m */,
+				588D43651502CE69007C1109 /* UIView+DLShojiSupport.h */,
+				588D43661502CE6A007C1109 /* UIView+DLShojiSupport.m */,
+				5807104714FFD08600B6661A /* DLShojiBackgroundView.h */,
+				5807104814FFD08600B6661A /* DLShojiBackgroundView.m */,
+				5807105D15012C6C00B6661A /* Table Controller */,
+			);
+			name = DLSlidingNav;
+			sourceTree = "<group>";
+		};
+		5807105D15012C6C00B6661A /* Table Controller */ = {
+			isa = PBXGroup;
+			children = (
+				58952BC4151E58CD00996E5C /* PatientSelectionTableViewController.h */,
+				58952BC5151E58CD00996E5C /* PatientSelectionTableViewController.m */,
+				5807106315012D1200B6661A /* DLShojiTableViewController.h */,
+				5807106415012D1200B6661A /* DLShojiTableViewController.m */,
+				5842A9141508933A0049FFD6 /* DLShojiTableViewController.xib */,
+				5842A90D150890E20049FFD6 /* SparklineCell.h */,
+				5842A90E150890E20049FFD6 /* SparklineCell.m */,
+				5842A916150893680049FFD6 /* SparklineCell.xib */,
+				5842A92915093C6C0049FFD6 /* SparklineView.h */,
+				5842A92A15093C6C0049FFD6 /* SparklineView.m */,
+			);
+			name = "Table Controller";
+			sourceTree = "<group>";
+		};
+		5820E97B152982FB00CD771F /* HighChart */ = {
+			isa = PBXGroup;
+			children = (
+				5820E97C1529830900CD771F /* template.htm */,
+				5820E97D1529830900CD771F /* mootools-adapter.js */,
+				5820E97E1529830900CD771F /* mootools-adapter.src.js */,
+				5820E97F1529830900CD771F /* prototype-adapter.js */,
+				5820E9801529830900CD771F /* prototype-adapter.src.js */,
+				5820E9811529830900CD771F /* highstock.js */,
+				5820E9821529830900CD771F /* highstock.src.js */,
+				5820E9831529830900CD771F /* exporting.js */,
+				5820E9841529830900CD771F /* exporting.src.js */,
+				5820E9851529830900CD771F /* dark-blue.js */,
+				5820E9861529830900CD771F /* dark-green.js */,
+				5820E9871529830900CD771F /* gray.js */,
+				5820E9881529830900CD771F /* grid.js */,
+				5820E97315297B6E00CD771F /* DLDetailedGraphViewController.h */,
+				5820E97415297B6E00CD771F /* DLDetailedGraphViewController.m */,
+				5820E97515297B6F00CD771F /* DLDetailedGraphViewController.xib */,
+				5820E97815297BA400CD771F /* DLDetailedGraphView.h */,
+				5820E97915297BA500CD771F /* DLDetailedGraphView.m */,
+			);
+			name = HighChart;
+			sourceTree = "<group>";
+		};
+		58327CED151A2C79003DF4AA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				58327CEE151A2CA5003DF4AA /* TraceCoordinator.h */,
+				58327CEF151A2CA5003DF4AA /* TraceCoordinator.m */,
+			);
+			name = Coordinator;
+			sourceTree = "<group>";
+		};
+		5842A91C15090EE70049FFD6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5842A92615090F430049FFD6 /* EntityTypeHelpers.h */,
+				5842A92715090F430049FFD6 /* EntityTypeHelpers.m */,
+				5842A91D15090F060049FFD6 /* MSEntity.h */,
+				5842A91E15090F060049FFD6 /* MSEntity.m */,
+				5842A91F15090F060049FFD6 /* MSDataWrapper.h */,
+				5842A92015090F060049FFD6 /* MSDataWrapper.m */,
+				5842A92115090F060049FFD6 /* MSValue.h */,
+				5842A92215090F060049FFD6 /* MSValue.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		5854CC6715054257002BB002 /* TouchXML */ = {
+			isa = PBXGroup;
+			children = (
+				5854CC6815054279002BB002 /* Source */,
+			);
+			name = TouchXML;
+			sourceTree = "<group>";
+		};
+		5854CC6815054279002BB002 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5854CC6915054279002BB002 /* Creation */,
+				5854CC6E15054279002BB002 /* CXHTMLDocument.h */,
+				5854CC6F15054279002BB002 /* CXHTMLDocument.m */,
+				5854CC7015054279002BB002 /* CXMLDocument.h */,
+				5854CC7115054279002BB002 /* CXMLDocument.m */,
+				5854CC7215054279002BB002 /* CXMLDocument_PrivateExtensions.h */,
+				5854CC7315054279002BB002 /* CXMLDocument_PrivateExtensions.m */,
+				5854CC7415054279002BB002 /* CXMLElement.h */,
+				5854CC7515054279002BB002 /* CXMLElement.m */,
+				5854CC7615054279002BB002 /* CXMLElement_CreationExtensions.h */,
+				5854CC7715054279002BB002 /* CXMLElement_CreationExtensions.m */,
+				5854CC7815054279002BB002 /* CXMLElement_ElementTreeExtensions.h */,
+				5854CC7915054279002BB002 /* CXMLElement_ElementTreeExtensions.m */,
+				5854CC7A15054279002BB002 /* CXMLNamespaceNode.h */,
+				5854CC7B15054279002BB002 /* CXMLNamespaceNode.m */,
+				5854CC7C15054279002BB002 /* CXMLNode.h */,
+				5854CC7D15054279002BB002 /* CXMLNode.m */,
+				5854CC7E15054279002BB002 /* CXMLNode_PrivateExtensions.h */,
+				5854CC7F15054279002BB002 /* CXMLNode_PrivateExtensions.m */,
+				5854CC8015054279002BB002 /* CXMLNode_XPathExtensions.h */,
+				5854CC8115054279002BB002 /* CXMLNode_XPathExtensions.m */,
+				5854CC8215054279002BB002 /* Tidy */,
+				5854CC8515054279002BB002 /* TouchXML.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		5854CC6915054279002BB002 /* Creation */ = {
+			isa = PBXGroup;
+			children = (
+				5854CC6A15054279002BB002 /* CXMLDocument_CreationExtensions.h */,
+				5854CC6B15054279002BB002 /* CXMLDocument_CreationExtensions.m */,
+				5854CC6C15054279002BB002 /* CXMLNode_CreationExtensions.h */,
+				5854CC6D15054279002BB002 /* CXMLNode_CreationExtensions.m */,
+			);
+			path = Creation;
+			sourceTree = "<group>";
+		};
+		5854CC8215054279002BB002 /* Tidy */ = {
+			isa = PBXGroup;
+			children = (
+				5854CC8315054279002BB002 /* CTidy.h */,
+				5854CC8415054279002BB002 /* CTidy.m */,
+			);
+			path = Tidy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5807102414FFD00700B6661A /* Shoji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5807103D14FFD00800B6661A /* Build configuration list for PBXNativeTarget "Shoji" */;
+			buildPhases = (
+				5807102114FFD00700B6661A /* Sources */,
+				5807102214FFD00700B6661A /* Frameworks */,
+				5807102314FFD00700B6661A /* Resources */,
+				58C0E94A15298B1700468614 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shoji;
+			productName = Shoji;
+			productReference = 5807102514FFD00700B6661A /* Shoji.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5807101C14FFD00700B6661A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Dr.Lulu;
+			};
+			buildConfigurationList = 5807101F14FFD00700B6661A /* Build configuration list for PBXProject "Shoji" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5807101A14FFD00700B6661A;
+			productRefGroup = 5807102614FFD00700B6661A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5807102414FFD00700B6661A /* Shoji */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5807102314FFD00700B6661A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5807103414FFD00800B6661A /* InfoPlist.strings in Resources */,
+				5807105414FFE24100B6661A /* DLShojiNavController.xib in Resources */,
+				5842A9151508933A0049FFD6 /* DLShojiTableViewController.xib in Resources */,
+				5842A917150893680049FFD6 /* SparklineCell.xib in Resources */,
+				5820E97715297B6F00CD771F /* DLDetailedGraphViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5807102114FFD00700B6661A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5807103614FFD00800B6661A /* main.m in Sources */,
+				5807103A14FFD00800B6661A /* AppDelegate.m in Sources */,
+				5807104914FFD08600B6661A /* DLEventForwardingWindow.m in Sources */,
+				5807104A14FFD08600B6661A /* DLShojiNavController.m in Sources */,
+				5807104C14FFD08600B6661A /* DLShojiTableView.m in Sources */,
+				5807104D14FFD08600B6661A /* DLShojiBackgroundView.m in Sources */,
+				5807106615012D1200B6661A /* DLShojiTableViewController.m in Sources */,
+				588D43671502CE6A007C1109 /* UIView+DLShojiSupport.m in Sources */,
+				5854CC8615054279002BB002 /* CXMLDocument_CreationExtensions.m in Sources */,
+				5854CC8715054279002BB002 /* CXMLNode_CreationExtensions.m in Sources */,
+				5854CC8815054279002BB002 /* CXHTMLDocument.m in Sources */,
+				5854CC8915054279002BB002 /* CXMLDocument.m in Sources */,
+				5854CC8A15054279002BB002 /* CXMLDocument_PrivateExtensions.m in Sources */,
+				5854CC8B15054279002BB002 /* CXMLElement.m in Sources */,
+				5854CC8C15054279002BB002 /* CXMLElement_CreationExtensions.m in Sources */,
+				5854CC8D15054279002BB002 /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				5854CC8E15054279002BB002 /* CXMLNamespaceNode.m in Sources */,
+				5854CC8F15054279002BB002 /* CXMLNode.m in Sources */,
+				5854CC9015054279002BB002 /* CXMLNode_PrivateExtensions.m in Sources */,
+				5854CC9115054279002BB002 /* CXMLNode_XPathExtensions.m in Sources */,
+				5854CC9215054279002BB002 /* CTidy.m in Sources */,
+				5842A90F150890E20049FFD6 /* SparklineCell.m in Sources */,
+				5842A92315090F060049FFD6 /* MSEntity.m in Sources */,
+				5842A92415090F060049FFD6 /* MSDataWrapper.m in Sources */,
+				5842A92515090F060049FFD6 /* MSValue.m in Sources */,
+				5842A92815090F430049FFD6 /* EntityTypeHelpers.m in Sources */,
+				5842A92B15093C6C0049FFD6 /* SparklineView.m in Sources */,
+				58327CF0151A2CA5003DF4AA /* TraceCoordinator.m in Sources */,
+				58952BC6151E58CD00996E5C /* PatientSelectionTableViewController.m in Sources */,
+				5820E97615297B6F00CD771F /* DLDetailedGraphViewController.m in Sources */,
+				5820E97A15297BA500CD771F /* DLDetailedGraphView.m in Sources */,
+				5820E98A1529830900CD771F /* mootools-adapter.js in Sources */,
+				5820E98B1529830900CD771F /* mootools-adapter.src.js in Sources */,
+				5820E98C1529830900CD771F /* prototype-adapter.js in Sources */,
+				5820E98D1529830900CD771F /* prototype-adapter.src.js in Sources */,
+				5820E98E1529830900CD771F /* highstock.js in Sources */,
+				5820E98F1529830900CD771F /* highstock.src.js in Sources */,
+				5820E9901529830900CD771F /* exporting.js in Sources */,
+				5820E9911529830900CD771F /* exporting.src.js in Sources */,
+				5820E9921529830900CD771F /* dark-blue.js in Sources */,
+				5820E9931529830900CD771F /* dark-green.js in Sources */,
+				5820E9941529830900CD771F /* gray.js in Sources */,
+				5820E9951529830900CD771F /* grid.js in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5807103214FFD00800B6661A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5807103314FFD00800B6661A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5807103B14FFD00800B6661A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiajie Zhang (ZCJAEXWYRZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiajie Zhang (ZCJAEXWYRZ)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "4AE4CC10-90F8-4C3B-95A9-116768394E8E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4AE4CC10-90F8-4C3B-95A9-116768394E8E";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5807103C14FFD00800B6661A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiajie Zhang (ZCJAEXWYRZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiajie Zhang (ZCJAEXWYRZ)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "4AE4CC10-90F8-4C3B-95A9-116768394E8E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4AE4CC10-90F8-4C3B-95A9-116768394E8E";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5807103E14FFD00800B6661A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Shoji/Shoji-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "Shoji/Shoji-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5807103F14FFD00800B6661A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Shoji/Shoji-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "Shoji/Shoji-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5807101F14FFD00700B6661A /* Build configuration list for PBXProject "Shoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5807103B14FFD00800B6661A /* Debug */,
+				5807103C14FFD00800B6661A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5807103D14FFD00800B6661A /* Build configuration list for PBXNativeTarget "Shoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5807103E14FFD00800B6661A /* Debug */,
+				5807103F14FFD00800B6661A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5807101C14FFD00700B6661A /* Project object */;
+}

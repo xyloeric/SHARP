@@ -1,0 +1,360 @@
+//
+//  DLSlidingNavController.m
+//  MediSenseFrontMac
+//
+//  Created by Zhe Li on 12/26/11.
+//  Copyright 2011 Dr.Lulu. All rights reserved.
+//
+
+#import "DLShojiNavController.h"
+#import "DLShojiTableView.h"
+#import "DLShojiBackgroundView.h"
+
+@implementation DLShojiNavController
+@synthesize backgroundView;
+@synthesize onscreenViews, offscreenViews;
+@synthesize frontView;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Initialization code here.
+//        self.backgroundView = [[DLShojiBackgroundView alloc] initWithDelegate:self];
+//        
+//        backgroundView.frame = CGRectMake(self.view.bounds.origin.x + 5, self.view.bounds.origin.y + 5, self.view.bounds.size.width - 10, self.view.bounds.size.height - 10); 
+//        backgroundView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
+//        
+//        [self.view addSubview:backgroundView];
+        
+        //        MediSenseFrontMacAppDelegate *appDelegate = (MediSenseFrontMacAppDelegate *)[[NSApplication sharedApplication] delegate];
+        //        appDelegate.window.horizontalScrollForwardView = backgroundView;
+        backgroundView.frame = CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height - 44);
+        backgroundView.delegate = self;
+        self.onscreenViews = [[NSMutableArray alloc] init];
+        self.offscreenViews = [[NSMutableArray alloc] init];
+        
+        
+        viewControllers = CFDictionaryCreateMutable(NULL, 0, NULL, NULL);
+
+    }
+    
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)_frame;
+{
+    self = [super init];
+    if (self) {
+        self.view = [[UIView alloc] initWithFrame:_frame];
+        
+        
+        self.backgroundView = [[DLShojiBackgroundView alloc] initWithDelegate:self];
+        backgroundView.frame = CGRectMake(self.view.bounds.origin.x + 5, self.view.bounds.origin.y + 5, self.view.bounds.size.width - 10, self.view.bounds.size.height - 10); 
+        backgroundView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
+        
+        [self.view addSubview:backgroundView];
+        
+//        MediSenseFrontMacAppDelegate *appDelegate = (MediSenseFrontMacAppDelegate *)[[NSApplication sharedApplication] delegate];
+//        appDelegate.window.horizontalScrollForwardView = backgroundView;
+        
+        self.onscreenViews = [[NSMutableArray alloc] init];
+        self.offscreenViews = [[NSMutableArray alloc] init];
+        
+        
+        viewControllers = CFDictionaryCreateMutable(NULL, 0, NULL, NULL);
+        
+    }
+    
+    return self;
+}
+
+- (void)dealloc
+{
+    CFRelease(viewControllers);
+}
+
+- (void)viewWillLayoutSubviews{
+    //NSLog(@"%f, %f, %f, %f", self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height);
+    backgroundView.frame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y + 44, self.view.bounds.size.width, self.view.bounds.size.height - 44);
+    [self relayoutViews];
+    //backgroundView.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + 44, self.view.frame.size.width, self.view.frame.size.height - 44);
+
+}
+
+- (CGPoint)leftDockingPoint
+{
+    return CGPointMake(0.125*self.backgroundView.frame.size.width, 0.0);
+}
+
+- (CGPoint)middleDockingPoint
+{
+    if ([onscreenViews count] == 1) {
+        return CGPointMake(self.backgroundView.frame.size.width*(1-0.4375)*0.5, 0.0);
+    }
+    return CGPointMake(0.5625*self.backgroundView.frame.size.width, 0.0);
+}
+
+- (CGPoint)rightDockingPoint
+{
+    return CGPointMake(self.backgroundView.frame.size.width, 0.0);
+    
+}
+
+- (void)redockViews
+{
+    [onscreenViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        DLShojiTableView *_oView = (DLShojiTableView *)obj;
+        if (idx == [onscreenViews count] - 1) {
+            [_oView redockToPoint:[self middleDockingPoint]];
+        }
+        else {
+            [_oView redockToPoint:[self leftDockingPoint]];
+        }
+    }];
+    
+    [offscreenViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        DLShojiTableView *_fView = (DLShojiTableView *)obj;
+        [_fView redockToPoint:[self rightDockingPoint]];
+    }];
+}
+
+- (void)determinAndShiftViews
+{
+    if (dragOffset >= self.backgroundView.frame.size.width*0.4375*0.2) {
+        [self shiftViewsRight];
+    }
+    else if (dragOffset <= -self.backgroundView.frame.size.width*0.4375*0.2) {
+        [self shiftViewsLeft];
+    }
+    [self redockViews];
+    dragOffset = 0;
+}
+
+- (void)shiftViewsRight
+{
+    if ([onscreenViews count] > 2) {
+        DLShojiTableView *lastView = [onscreenViews lastObject];
+        [offscreenViews addObject:lastView];
+        [onscreenViews removeLastObject];
+    }
+}
+
+- (void)shiftViewsLeft
+{
+    if ([offscreenViews count] > 0) {
+        DLShojiTableView *lastView = [offscreenViews lastObject];
+        [onscreenViews addObject:lastView];
+        [offscreenViews removeLastObject];
+    }
+}
+
+- (IBAction)shiftLeftAndDock:(id)sender
+{
+    [self shiftViewsLeft];
+    [self redockViews];
+}
+
+- (IBAction)shiftRightAndDock:(id)sender
+{
+    [self shiftViewsRight];
+    [self redockViews];
+}
+
+- (void)moveViewWithOffset:(CGFloat)_offset
+{
+    dragOffset += _offset;
+    
+    
+    DLShojiTableView *_oView1 = [onscreenViews lastObject];
+    [_oView1 moveForXOffset:_offset];
+    
+    if (dragOffset > 0) {
+        int32_t pass = (int32_t)(dragOffset/(self.view.frame.size.width*0.4375));
+        [onscreenViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            DLShojiTableView *_oView = (DLShojiTableView *)obj;
+            if ((int32_t)idx >= (int32_t)[onscreenViews count]-2-pass && idx != [onscreenViews count] - 1) {
+                [_oView moveForXOffset:_offset];
+            }
+        }];
+    }
+    else {
+        int32_t pass = -(int32_t)(dragOffset/(self.view.frame.size.width*0.4375));
+        
+        [offscreenViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            DLShojiTableView *_fView = (DLShojiTableView *)obj;
+            if ((int32_t)idx >= (int32_t)[offscreenViews count]-1-pass ) {
+                [_fView moveForXOffset:_offset];
+            }
+        }];
+    }
+}
+
+- (void)moveViewWithTranslation:(CGFloat)_translation
+{
+    dragOffset = _translation;
+    
+    DLShojiTableView *_oView1 = [onscreenViews lastObject];
+    [_oView1 moveForTranslation:_translation];
+    
+    if (dragOffset > 0) {
+        int32_t pass = (int32_t)(dragOffset/(self.view.frame.size.width*0.4375));
+        [onscreenViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            DLShojiTableView *_oView = (DLShojiTableView *)obj;
+            if ((int32_t)idx >= (int32_t)[onscreenViews count]-2-pass && idx != [onscreenViews count] - 1) {
+                [_oView moveForTranslation:_translation];
+            }
+        }];
+    }
+    else {
+        int32_t pass = -(int32_t)(dragOffset/(self.view.frame.size.width*0.4375));
+        
+        [offscreenViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            DLShojiTableView *_fView = (DLShojiTableView *)obj;
+            if ((int32_t)idx >= (int32_t)[offscreenViews count]-1-pass ) {
+                [_fView moveForTranslation:_translation];
+            }
+        }];
+    }
+
+}
+
+- (void)relayoutViews
+{
+    [onscreenViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        DLShojiTableView *_oView = (DLShojiTableView *)obj;
+        if (idx == [onscreenViews count] - 1) {
+            [_oView setFrame:CGRectMake([self middleDockingPoint].x, [self middleDockingPoint].y, self.backgroundView.frame.size.width*0.4375, self.backgroundView.frame.size.height)];
+        }
+        else {
+            [_oView setFrame:CGRectMake([self leftDockingPoint].x, [self leftDockingPoint].y, self.backgroundView.frame.size.width*0.4375, self.backgroundView.frame.size.height)];
+        }
+    }];
+    
+    [offscreenViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        DLShojiTableView *_fView = (DLShojiTableView *)obj;
+        [_fView setFrame:CGRectMake([self rightDockingPoint].x, [self rightDockingPoint].y, self.backgroundView.frame.size.width*0.4375, self.backgroundView.frame.size.height)];
+    }];
+    
+    //[self redockViews];
+}
+
+- (IBAction)_addNewView:(id)sender
+{
+    DLShojiTableView *newSubview = [[DLShojiTableView alloc] initWithNavController:self];
+    
+    
+    //DLSlidingChildView *lastSubview = [self.backgroundView.subviews lastObject];
+    [self popOffscreenViews];
+    
+    [self.backgroundView addSubview:newSubview];
+    [onscreenViews addObject:newSubview];
+    [self redockViews];
+}
+
+- (void)pushView:(UIView *)_pushView
+{
+    __autoreleasing DLShojiTableView *newSubview = [[DLShojiTableView alloc] initWithFrame:CGRectMake(self.backgroundView.frame.size.width, 0, self.backgroundView.frame.size.width*0.4375, self.backgroundView.frame.size.height)];
+    
+    _pushView.frame = newSubview.bounds;
+    [newSubview addSubview:_pushView];
+    
+    [self popOffscreenViews];
+    
+    [self.backgroundView addSubview:newSubview];
+    [onscreenViews addObject:newSubview];
+    [self redockViews];
+    
+}
+
+- (void)pushViewController:(UIViewController *)_viewController fromParent:(UIViewController *)sender
+{
+    @autoreleasepool {
+        
+        DLShojiTableView *newSubview = [[DLShojiTableView alloc] initWithFrame:CGRectMake(self.backgroundView.frame.size.width, 0, self.backgroundView.frame.size.width*0.4375, self.backgroundView.frame.size.height)];
+        
+        newSubview.viewController = _viewController;
+        
+        
+        
+        CFDictionarySetValue(viewControllers, (__bridge const void *)_viewController, (__bridge const void *)newSubview);
+        DLShojiTableView *parentContainer = (__bridge DLShojiTableView *)CFDictionaryGetValue(viewControllers, (__bridge const void *)sender);
+        if (parentContainer) {
+            //children view
+            if ([onscreenViews indexOfObject:parentContainer] == [onscreenViews count] - 1) {
+                [self popOffscreenViews];
+            }
+            else if([onscreenViews indexOfObject:parentContainer] == [onscreenViews count] - 2) {
+                [self popOffscreenViews];
+                UIView *lastView = [onscreenViews lastObject];
+                [lastView removeFromSuperview];
+                [onscreenViews removeLastObject];
+                lastView = nil;
+            }
+        }
+        else {
+            //root view
+            
+        }
+        
+        
+        [self.backgroundView addSubview:newSubview];
+        [onscreenViews addObject:newSubview];
+        [self redockViews];
+        
+        //    double delayInSeconds = 2.0;
+        //    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        //    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        //        _viewController.view.frame = newSubview.bounds;
+        //        _viewController.view.autoresizingMask = NSViewWidthSizable | NSViewMaxXMargin | NSViewHeightSizable | NSViewMaxYMargin;
+        //        [newSubview addSubview:_viewController.view];
+        //});
+        
+        
+        //CFDictionarySetValue(viewControllers, (__bridge const void *)newSubview, (__bridge const void *)_viewController);
+        
+        [self popOffscreenViews];
+    }
+}
+
+- (void)popOffscreenViews
+{
+    [offscreenViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        DLShojiTableView *view = (DLShojiTableView *)obj;
+        [view removeFromSuperview];
+        if (view.viewController) {
+            CFDictionaryRemoveValue(viewControllers, (__bridge const void*)view.viewController);
+        }
+        view = nil;
+        
+    }];
+    [offscreenViews removeAllObjects];
+}
+
+- (void)popAllViews
+{
+    [self popOffscreenViews];
+    
+    [onscreenViews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        DLShojiTableView *view = (DLShojiTableView *)obj;
+        [view removeFromSuperview];
+        if (view.viewController) {
+            CFDictionaryRemoveValue(viewControllers, (__bridge const void*)view.viewController);
+        }
+        view = nil;
+    }];
+    [onscreenViews removeAllObjects];
+    
+}
+
+- (IBAction)_removeAllViews:(id)sender
+{
+    [self popAllViews];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return YES;
+}
+
+@end
