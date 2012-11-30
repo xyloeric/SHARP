@@ -150,7 +150,7 @@
         
         NSString *urlString = [NSString stringWithFormat:@"http://%@:8000/pke/rest/kb/mimic/test/%@/%@", HOST, _pId, _term];
         //NSURL *url = [NSURL URLWithString:urlString];
-        NSURL *url = [NSURL URLWithString:@"http://139.52.67.249:8000/CachingProxyServer/CachingServer"];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:8000/CachingProxyServer/CachingServer", HOST]];
         
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLCacheStorageAllowed timeoutInterval:10];
         NSData *queryURLData = [urlString dataUsingEncoding:NSUTF8StringEncoding];

@@ -84,9 +84,9 @@ enum {
 
 - (void)viewDidLayoutSubviews{
     //NSLog(@"%f, %f, %f, %f", self.view.bounds.origin.x, self.view.bounds.origin.y, self.view.bounds.size.width, self.view.bounds.size.height);
-    [super viewDidLayoutSubviews];
     backgroundView.frame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y + 44, self.view.bounds.size.width, self.view.bounds.size.height - 44);
     [self relayoutViews];
+    [super viewDidLayoutSubviews];
     //backgroundView.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + 44, self.view.frame.size.width, self.view.frame.size.height - 44);
     
 }

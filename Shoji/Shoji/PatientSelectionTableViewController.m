@@ -8,6 +8,7 @@
 
 #import "PatientSelectionTableViewController.h"
 #import "TouchXML.h"
+#define HOST @"139.52.67.249"
 
 @interface PatientSelectionTableViewController ()
 
@@ -98,7 +99,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    NSURL *documentURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://139.52.67.249:8000/pke/rest/kb/patientlist"]];   
+    NSURL *documentURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@:8000/pke/rest/kb/patientlist", HOST]];
     NSURLRequest *request = [NSURLRequest requestWithURL:documentURL];
     self.queryConnection = [NSURLConnection connectionWithRequest:request delegate:self];
     [queryConnection start];

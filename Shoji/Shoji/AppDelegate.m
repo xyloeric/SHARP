@@ -40,7 +40,7 @@
 {
     self.slidingNavController = [[DLShojiNavController alloc] initWithNibName:@"DLShojiNavController" bundle:nil];
     //((DLEventForwardingWindow *)self.window).horizontalScrollForwardView = slidingNavController.backgroundView;
-    self.slidingNavController.view.frame = self.window.frame;
+   // self.slidingNavController.view.frame = self.window.frame;
 //    slidingNavController.wantsFullScreenLayout = YES;
     
 //    slidingNavController.view.autoresizingMask = NSViewWidthSizable | NSViewMaxXMargin | NSViewHeightSizable | NSViewMaxYMargin;
